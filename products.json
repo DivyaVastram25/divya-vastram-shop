@@ -1,0 +1,339 @@
+[
+  {
+    "name": "Light Green Full Set",
+    "sku": "LG001",
+    "category": "Dress Set",
+    "price": 210,
+    "fabric": "Cotton",
+    "size":"0",
+    "image": "light_green_fullSet.jpg",
+    "description": "Light green cotton dress full set for Laddu Gopal."
+  },
+  {
+    "name": "Light Green Dress",
+    "sku": "LG002",
+    "category": "Dress",
+    "price": 250,
+    "fabric": "Cotton",
+    "size":"4",
+    "image": "Light_greenDress.jpg",
+    "description": "Light green daily wear dress for Laddu Gopal."
+  },
+  {
+    "name": "Mala Set of 8",
+    "sku": "LG003",
+    "category": "Mala",
+    "price": 240,
+    "fabric": "Beads",
+    "size":"0",
+    "image": "Mala_set_8.jpg",
+    "description": "Mala combo set of 8 for Gopal decoration."
+  },
+  {
+    "name": "Mala Set of 5",
+    "sku": "LG004",
+    "category": "Mala",
+    "price": 150,
+    "fabric": "Beads",
+    "size":"3",
+    "image": "mala_set_of5.jpg",
+    "description": "Colorful mala set of 5 for deity decoration."
+  },
+  {
+    "name": "Mala",
+    "sku": "LG005",
+    "category": "Mala",
+    "price": 140,
+    "fabric": "Beads",
+    "size":"1",
+    "image": "Mala.jpg",
+    "description": "Single mala with traditional beads."
+  },
+  {
+    "name": "Mix Colour Dress Set",
+    "sku": "LG006",
+    "category": "Dress Set",
+    "price": 490,
+    "fabric": "Silk Blend",
+    "size":"5",
+    "image": "mixColour_dressSet.jpg",
+    "description": "Mixed color silk blend set for festive occasions."
+  },
+  {
+    "name": "Moti Mala",
+    "sku": "LG007",
+    "category": "Mala",
+    "price": 250,
+    "fabric": "Pearl",
+    "size":"standard",
+    "image": "moti_mala.jpg",
+    "description": "Pearl mala to add beauty to idol."
+  },
+  {
+    "name": "Multicolour Hanger Dress",
+    "sku": "LG008",
+    "category": "Dress",
+    "price": 150,
+    "fabric": "Cotton Silk",
+    "size":"14inch",
+    "image": "Multicolour_Hanger.jpg",
+    "description": "Multicolor hanger dress with vibrant colors."
+  },
+  {
+    "name": "Necklace",
+    "sku": "LG009",
+    "category": "Jewellery",
+    "price": 250,
+    "fabric": "Plastic Beads",
+    "size":"3",
+    "image": "necklace.jpg",
+    "description": "Colorful plastic beaded necklace."
+  },
+  {
+    "name": "Peacock Dress",
+    "sku": "LG010",
+    "category": "Dress",
+    "price": 680,
+    "fabric": "Silk",
+    "size":"4",
+    "quantity":"3 pics",
+    "image": "Peacock_dress.jpg",
+    "description": "Vibrant peacock design silk dress."
+  },
+  {
+    "name": "Peacock Statues",
+    "sku": "LG011",
+    "category": "Accessories",
+    "price": 250,
+    "fabric": "Plastic",
+    "size":"standard",
+    "quantity":"3 pics",
+    "image": "Peacock_statues.jpg",
+    "description": "Decorative peacock statues for setup."
+  },
+  {
+    "name": "Pink Dress",
+    "sku": "LG012",
+    "category": "Dress",
+    "price": 120,
+    "fabric": "Cotton",
+    "size":"1",
+    "image": "pink_dress.jpg",
+    "description": "Elegant pink dress for all occasions."
+  },
+  {
+    "name": "Pink Full Set",
+    "sku": "LG013",
+    "category": "Dress Set",
+    "price":290,
+    "fabric": "Silk",
+     "size":"1",
+    "image": "Pink_full_set.jpg",
+    "description": "Full dress set in soft pink silk."
+  },
+  {
+    "name": "Red Mukut",
+    "sku": "LG014",
+    "category": "Accessories",
+    "price": 150,
+    "fabric": "Velvet",
+    "size":"6",
+    "image": "red_mukut.jpg",
+    "description": "Traditional red velvet mukut."
+  },
+  {
+    "name": "Red Aasan",
+    "sku": "LG015",
+    "category": "Accessories",
+    "price": 90,
+    "fabric": "Cotton Velvet",
+    "size":"7*7",
+    "image": "RedAasan.jpg",
+    "description": "Comfortable aasan in red velvet."
+  },
+  {
+    "name": "Sea Green Dress",
+    "sku": "LG016",
+    "category": "Dress",
+    "price": 150,
+    "fabric": "Cotton Silk",
+    "size":"1",
+    "image": "seaGreendress.jpg",
+    "description": "Sea green light dress for cool look."
+  },
+  {
+    "name": "Toran",
+    "sku": "LG017",
+    "category": "Accessories",
+    "price": 250,
+    "fabric": "Thread & Beads",
+    "size":"standard",
+    "image": "Toran.jpg",
+    "description": "Decorative Toran for temple decoration."
+  },
+  {
+    "name": "Wheel Hanger",
+    "sku": "LG018",
+    "category": "Accessories",
+    "price": 150,
+    "fabric": "Wood + Thread",
+    "size":"14",
+    "image": "wheel_hanger.jpg",
+    "description": "Ethnic wheel hanger for hanging decoration."
+  },
+  {
+    "name": "Blue Full Set",
+    "sku": "LG019",
+    "category": "Dress Set",
+    "price": 380,
+    "fabric": "Silk",
+    "size":"4",
+    "image": "blue_full_set.jpg",
+    "description": "Complete blue dress set for Gopalji."
+  },
+  {
+    "name": "Blue Dress",
+    "sku": "LG020",
+    "category": "Dress",
+    "price": 380,
+    "fabric": "Silk",
+    "size":"4",
+    "image": "blue_full_set.jpg",
+    "description": "Silk blue traditional Laddu Gopal dress."
+  },
+
+  {
+    "name": "Combo of 5",
+    "sku": "LG021",
+    "category": "Dress Set",
+    "price": 1230,
+    "fabric": "Silk",
+    "size":"4",
+    "image": "combo_of 5.jpg",
+    "description": "Pack of 5 colorful Gopalji dresses."
+  },
+  {
+    "name": "Combo of 6",
+    "sku": "LG022",
+    "category": "Dress Set",
+    "price":540,
+    "fabric": "Silk",
+    "size":"1",
+    "quantity":"6 pics",
+    "image": "combo_of 6.jpg",
+    "description": "Combo of 6 Laddu Gopal outfits."
+  },
+  {
+    "name": "Dress Combo 4",
+    "sku": "LG023",
+    "category": "Dress Set",
+    "price": 300,
+    "fabric": "Mixed",
+    "size":"0",
+    "quantity":"4 pices",
+    "image": "Dress_combo_4.jpg",
+    "description": "4 dress combo in various colors."
+  },
+  {
+    "name": "Full Set Dress",
+    "sku": "LG024",
+    "category": "Dress Set",
+    "price": 510,
+    "fabric": "Silk",
+    "size":"4",
+    "image": "full_set_dress.jpg",
+    "description": "Full combo dress in elegant design."
+  },
+  {
+    "name": "Full Set",
+    "sku": "LG025",
+    "category": "Dress Set",
+    "price": 250,
+    "fabric": "Silk",
+    "size":"1",
+    "image": "full_set.jpg",
+    "description": "All accessories full set for Laddu Gopal."
+  },
+  {
+    "name": "Full Set",
+    "sku": "LG026",
+    "category": "Dress",
+    "price": 468,
+    "fabric": "Cotton",
+    "size":"4",
+    "image": "fullSet.jpg",
+    "description": "Simple daily use dress."
+  },
+  {
+    "name": "Ganeshji Hanger",
+    "sku": "LG027",
+    "category": "Accessories",
+    "price": 150,
+    "fabric": "Wood",
+    "size":"16 inch",
+    "image": "Ganeshji_Hanger.jpg",
+    "description": "Handcrafted wooden Ganeshji hanger."
+  },
+  {
+    "name": "Green Dress",
+    "sku": "LG028",
+    "category": "Dress",
+    "price": 290,
+    "fabric": "Cotton",
+    "size":"1",
+    "image": "green_full_set.jpg",
+    "description": "Vibrant green color simple dress."
+  },
+  {
+    "name": "Green Toran",
+    "sku": "LG029",
+    "category": "Accessories",
+    "price": 250,
+    "fabric": "Beads & Thread",
+    "size":"standard",
+    "image": "GreenToran.jpg",
+    "description": "Traditional green toran for mandir."
+  },
+  {
+    "name": "Laddu Green",
+    "sku": "LG030",
+    "category": "Dress",
+    "price": 190,
+    "fabric": "Cotton",
+    "size":"1",
+    "image": "laddu_green.jpg",
+    "description": "Fresh green dress for Laddu Gopal."
+  },
+ 
+  {
+    "name": "Laddu Gopal Dress",
+    "sku": "LG032",
+    "category": "Dress",
+    "price": 910,
+    "fabric": "Silk",
+    "size":"1",
+    "image": "laddugopal_dress.jpg",
+    "description": "Traditional Laddu Gopal attire."
+  },
+  {
+    "name": "Lavender Dress",
+    "sku": "LG033",
+    "category": "Dress",
+    "price": 130,
+    "fabric": "Cotton",
+    "size":"2",
+    "image": "lavender_dress.jpg",
+    "description": "Lavender color cotton dress."
+  },
+  {
+    "name": "Light Blue Dress",
+    "sku": "LG034",
+    "category": "Dress",
+    "price": 70,
+    "fabric": "Cotton",
+    "size":"0",
+    "image": "light_blue_dress.jpg",
+    "description": "Light blue cotton outfit for small idols."
+  }
+]
+
