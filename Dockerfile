@@ -1,17 +1,20 @@
-# Use lightweight Python image
+# Use a base image with Python
 FROM python:3.10-slim
 
 # Set working directory
 WORKDIR /app
 
-# Copy all files
-COPY . .
+# Copy all project files into the container
+COPY . /app
 
-# Install Python dependencies
+# Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose port (hugging face uses 7860)
+# Expose the port Flask runs on
 EXPOSE 7860
 
-# Use gunicorn to run Flask on port 7860
-CMD ["gunicorn", "--bind", "0.0.0.0:7860", "app:app"]
+# Set environment variable
+ENV FLASK_APP=app.py
+
+# Run the app
+CMD ["flask", "run", "--host=0.0.0.0", "--port=7860"]
