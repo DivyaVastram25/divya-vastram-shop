@@ -21,8 +21,10 @@
   <a href="{{ url_for('cart') }}" class="btn btn-outline-primary">🛒 View Cart</a>
 </nav>
 <div class="container mt-5 text-center">
-  <h2>Scan to Pay via UPI</h2>
-  <img src="{{ url_for('static', filename='qr/qr.png') }}" alt="UPI QR Code" height="300">
+<p>Scan this QR code using any UPI app (PhonePe, Google Pay, etc.)</p>
+<img src="{{ url_for('static', filename='qr/qr.png') }}" alt="QR Code" class="img-fluid" style="max-width: 300px;">
+
+
   <p class="mt-3"><strong>Total Amount:</strong> ₹{{ total }}</p>
 
   <form method="POST" enctype="multipart/form-data">
