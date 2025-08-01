@@ -1,46 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Your Cart</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Cart - Divya Vastram</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .product-img {
+            height: 100px;
+            width: auto;
+        }
+    </style>
 </head>
-<body>
-<nav class="navbar navbar-light bg-light px-4 py-2">
-  <div class="d-flex align-items-center">
-    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" height="120">
-    <h4 class="ms-3 mb-0">Pavitrata Aur Sundarta ka Sangam</h4>
-  </div>
-  <a href="{{ url_for('cart') }}" class="btn btn-outline-primary">🛒 View Cart</a>
-</nav>
-<div class="container mt-5">
-  <h2 class="text-center mb-4">Your Cart</h2>
-  {% if cart %}
-  <ul class="list-group">
-    {% for item in cart %}
-    <li class="list-group-item d-flex justify-content-between align-items-center">
-      {{ item.name }} - ₹{{ item.price }}
-      <form method="POST" action="{{ url_for('remove_item') }}">
-        <input type="hidden" name="index" value="{{ loop.index0 }}">
-        <button class="btn btn-danger btn-sm">Remove</button>
-      </form>
-    </li>
-    {% endfor %}
-    <li class="list-group-item d-flex justify-content-between">
-      Delivery Charge
-      <span>₹{{ delivery }}</span>
-    </li>
-    <li class="list-group-item d-flex justify-content-between fw-bold">
-      Total
-      <span>₹{{ total }}</span>
-    </li>
-  </ul>
-  <div class="text-center mt-4">
-    <a href="{{ url_for('checkout') }}" class="btn btn-success">Place Order</a>
-  </div>
-  {% else %}
-  <p class="text-center">Your cart is empty.</p>
-  {% endif %}
+<body class="bg-light">
+
+<div class="container py-4">
+    <h2 class="mb-4">🛒 Your Cart</h2>
+    {% if cart %}
+        <form action="{{ url_for('checkout') }}" method="get">
+            <div class="table-responsive">
+                <table class="table table-bordered bg-white">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Qty</th>
+                            <th>Price</th>
+                            <th>Subtotal</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cartTableBody">
+                        {% for item in cart %}
+                        <tr data-sku="{{ item['sku'] }}">
+                            <td>
+                                <img src="{{ url_for('static', filename='images/' + item['image']) }}" class="product-img me-2">
+                                {{ item['name'] }}
+                            </td>
+                            <td>
+                                <form method="POST" action="{{ url_for('update_quantity') }}">
+                                    <input type="hidden" name="sku" value="{{ item['sku'] }}">
+                                    <input type="number" name="quantity" value="{{ item.get('quantity', 1) }}" min="1" onchange="this.form.submit()" class="form-control" style="width: 80px;">
+                                </form>
+                            </td>
+                            <td>₹{{ item['price'] }}</td>
+                            <td>₹{{ item['price'] * item.get('quantity', 1) }}</td>
+                            <td>
+                                <form method="POST" action="{{ url_for('remove_item') }}">
+                                    <input type="hidden" name="index" value="{{ loop.index0 }}">
+                                    <button type="submit" class="btn btn-danger btn-sm">🗑️</button>
+                                </form>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="text-end mt-3">
+                <p><strong>Subtotal:</strong> ₹{{ subtotal }}</p>
+                <p><strong>Delivery:</strong> ₹{{ delivery }}</p>
+                <p><strong>Total:</strong> ₹{{ total }}</p>
+                <button type="submit" class="btn btn-success">Proceed to Checkout</button>
+            </div>
+        </form>
+    {% else %}
+        <p>Your cart is empty 😢</p>
+    {% endif %}
 </div>
+
+<script>
+// 🧠 Save current cart to localStorage
+function saveCartToLocal() {
+    const rows = document.querySelectorAll('#cartTableBody tr');
+    const cart = [];
+
+    rows.forEach(row => {
+        const sku = row.dataset.sku;
+        const name = row.querySelector('td:nth-child(1)').innerText.trim();
+        const quantity = parseInt(row.querySelector('input[name="quantity"]').value);
+        const price = parseInt(row.querySelector('td:nth-child(3)').innerText.replace("₹", ""));
+        const image = row.querySelector('img').getAttribute('src').split('images/')[1];
+
+        cart.push({ sku, name, price, quantity, image });
+    });
+
+    localStorage.setItem('saved_cart', JSON.stringify(cart));
+}
+
+// 💥 Clear cart from localStorage if session cleared by user
+function clearLocalCart() {
+    localStorage.removeItem('saved_cart');
+}
+
+// ⏪ Restore cart if session lost but localStorage exists
+function restoreCartIfEmpty() {
+    const cartRows = document.querySelectorAll('#cartTableBody tr');
+    if (cartRows.length === 0 && localStorage.getItem('saved_cart')) {
+        const cart = JSON.parse(localStorage.getItem('saved_cart'));
+        fetch("/add_to_cart_restore", {
+            method: "POST",
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ cart })
+        }).then(() => location.reload());
+    }
+}
+
+// Save on page unload
+window.addEventListener('beforeunload', saveCartToLocal);
+window.addEventListener('load', restoreCartIfEmpty);
+</script>
+
 </body>
 </html>
